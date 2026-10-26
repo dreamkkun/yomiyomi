@@ -1,0 +1,29 @@
+[
+  { "id": "v_rest_01", "category": "restaurant", "japanese": "水", "furigana": "<ruby>水<rt>みず</rt></ruby>", "romaji": "mizu", "korean": "물", "example": { "jp": "お水を一杯ください。", "kr": "물 한 잔 주세요." } },
+  { "id": "v_rest_02", "category": "restaurant", "japanese": "お会計", "furigana": "お<ruby>会計<rt>かいけい</rt></ruby>", "romaji": "okaikei", "korean": "계산", "example": { "jp": "お会計をお願いします。", "kr": "계산 부탁드립니다." } },
+  { "id": "v_rest_03", "category": "restaurant", "japanese": "注文", "furigana": "ご<ruby>注文<rt>ちゅうもん</rt></ruby>", "romaji": "chuumon", "korean": "주문", "example": { "jp": "ご注文はお決まりですか？", "kr": "주문 결정하셨나요?" } },
+  { "id": "v_rest_04", "category": "restaurant", "japanese": "メニュー", "furigana": "メニュー", "romaji": "menyuu", "korean": "메뉴", "example": { "jp": "メニューを見せてください。", "kr": "메뉴를 보여 주세요." } },
+  { "id": "v_rest_05", "category": "restaurant", "japanese": "おすすめ", "furigana": "おすすめ", "romaji": "osusume", "korean": "추천", "example": { "jp": "おすすめは何ですか？", "kr": "추천 메뉴는 무엇인가요?" } },
+  { "id": "v_rest_06", "category": "restaurant", "japanese": "美味しい", "furigana": "<ruby>美味<rt>おい</rt></ruby>しい", "romaji": "oishii", "korean": "맛있다", "example": { "jp": "とても美味しいです。", "kr": "아주 맛있어요." } },
+
+  { "id": "v_hotel_01", "category": "hotel", "japanese": "荷物", "furigana": "<ruby>荷物<rt>にもつ</rt></ruby>", "romaji": "nimotsu", "korean": "짐, 수하물", "example": { "jp": "荷物を預かっていただけますか？", "kr": "짐을 맡아주실 수 있나요?" } },
+  { "id": "v_hotel_02", "category": "hotel", "japanese": "予約", "furigana": "<ruby>予約<rt>よやく</rt></ruby>", "romaji": "yoyaku", "korean": "예약", "example": { "jp": "3名で予約したキムです。", "kr": "3명으로 예약한 김입니다." } },
+  { "id": "v_hotel_03", "category": "hotel", "japanese": "チェックイン", "furigana": "チェックイン", "romaji": "chekkuin", "korean": "체크인", "example": { "jp": "チェックインは何時ですか？", "kr": "체크인은 몇 시인가요?" } },
+  { "id": "v_hotel_04", "category": "hotel", "japanese": "鍵", "furigana": "<ruby>鍵<rt>かぎ</rt></ruby>", "romaji": "kagi", "korean": "열쇠", "example": { "jp": "鍵をお願いします。", "kr": "열쇠 부탁드립니다." } },
+  { "id": "v_hotel_05", "category": "hotel", "japanese": "部屋", "furigana": "<ruby>部屋<rt>へや</rt></ruby>", "romaji": "heya", "korean": "방", "example": { "jp": "部屋は何階ですか？", "kr": "방은 몇 층인가요?" } },
+  { "id": "v_hotel_06", "category": "hotel", "japanese": "パスポート", "furigana": "パスポート", "romaji": "pasupooto", "korean": "여권", "example": { "jp": "パスポートを見せてください。", "kr": "여권을 보여 주세요." } },
+
+  { "id": "v_dir_01", "category": "directions", "japanese": "駅", "furigana": "<ruby>駅<rt>えき</rt></ruby>", "romaji": "eki", "korean": "지하철역/기차역", "example": { "jp": "一番近い駅はどこですか？", "kr": "가장 가까운 역은 어디인가요?" } },
+  { "id": "v_dir_02", "category": "directions", "japanese": "近く", "furigana": "<ruby>近<rt>ちか</rt></ruby>く", "romaji": "chikaku", "korean": "근처", "example": { "jp": "近くにコンビニはありますか？", "kr": "근처에 편의점이 있나요?" } },
+  { "id": "v_dir_03", "category": "directions", "japanese": "右", "furigana": "<ruby>右<rt>みぎ</rt></ruby>", "romaji": "migi", "korean": "오른쪽", "example": { "jp": "右に曲がってください。", "kr": "오른쪽으로 도세요." } },
+  { "id": "v_dir_04", "category": "directions", "japanese": "左", "furigana": "<ruby>左<rt>ひだり</rt></ruby>", "romaji": "hidari", "korean": "왼쪽", "example": { "jp": "左に曲がってください。", "kr": "왼쪽으로 도세요." } },
+  { "id": "v_dir_05", "category": "directions", "japanese": "まっすぐ", "furigana": "まっすぐ", "romaji": "massugu", "korean": "곧장, 똑바로", "example": { "jp": "まっすぐ行ってください。", "kr": "곧장 가세요." } },
+  { "id": "v_dir_06", "category": "directions", "japanese": "道", "furigana": "<ruby>道<rt>みち</rt></ruby>", "romaji": "michi", "korean": "길", "example": { "jp": "道に迷いました。", "kr": "길을 잃었어요." } },
+
+  { "id": "v_basic_01", "category": "basic", "japanese": "ありがとう", "furigana": "ありがとう", "romaji": "arigatou", "korean": "고마워요", "example": { "jp": "どうもありがとうございます。", "kr": "정말 감사합니다." } },
+  { "id": "v_basic_02", "category": "basic", "japanese": "すみません", "furigana": "すみません", "romaji": "sumimasen", "korean": "실례합니다, 죄송합니다", "example": { "jp": "すみません、ちょっといいですか？", "kr": "실례합니다, 잠깐 괜찮으세요?" } },
+  { "id": "v_basic_03", "category": "basic", "japanese": "はい", "furigana": "はい", "romaji": "hai", "korean": "네", "example": { "jp": "はい、お願いします。", "kr": "네, 부탁드립니다." } },
+  { "id": "v_basic_04", "category": "basic", "japanese": "いいえ", "furigana": "いいえ", "romaji": "iie", "korean": "아니요", "example": { "jp": "いいえ、大丈夫です。", "kr": "아니요, 괜찮습니다." } },
+  { "id": "v_basic_05", "category": "basic", "japanese": "今日", "furigana": "<ruby>今日<rt>きょう</rt></ruby>", "romaji": "kyou", "korean": "오늘", "example": { "jp": "今日はいい天気ですね。", "kr": "오늘은 날씨가 좋네요." } },
+  { "id": "v_basic_06", "category": "basic", "japanese": "いくら", "furigana": "いくら", "romaji": "ikura", "korean": "얼마", "example": { "jp": "これはいくらですか？", "kr": "이건 얼마인가요?" } }
+]

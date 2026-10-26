@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Noto Sans KR', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Malgun Gothic', system-ui, sans-serif;
+  }
+
+  /* 1. 루비 컨테이너 기본 설정 */
+  ruby {
+    display: ruby;
+    ruby-position: over; /* 한자 상단에 항상 배치 */
+    ruby-align: center; /* 한자 중앙 기준으로 발음 배치 */
+    line-height: 1.85; /* rt 태그로 인해 줄 간격이 튀는 현상 방지 */
+    margin: 0 0.05em; /* 인접 글자와의 최소 자간 확보 */
+  }
+
+  /* 2. 후리가나 발음 텍스트 최적화 */
+  rt {
+    display: ruby-text;
+    font-size: 0.6em; /* 본문 크기의 60% 비율 */
+    line-height: 1; /* rt 자체 높이 최소화 */
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    user-select: none; /* 복사 시 발음이 본문에 섞이지 않도록 방지 */
+    opacity: 0.9;
+  }
+
+  /* 3. 괄호 대체 텍스트(rp) 숨김 처리 (구형 브라우저 대응 태그) */
+  rp {
+    display: none;
+  }
+
+  /* 4. 다크 모드 */
+  .dark rt {
+    opacity: 0.8;
+  }
+}
+
+@layer utilities {
+  /* 후리가나 숨김/표시 토글용 클래스 */
+  .hide-furigana rt {
+    display: none;
+  }
+
+  .hide-furigana ruby {
+    line-height: inherit;
+  }
+}

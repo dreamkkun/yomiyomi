@@ -1,0 +1,214 @@
+[
+  {
+    "id": "scenario_restaurant",
+    "title": "식당에서 주문하기",
+    "situation": "이자카야/식당 방문 및 대표 메뉴 주문, 계산",
+    "dialogue": [
+      {
+        "speaker": "npc",
+        "japanese": "いらっしゃいませ！何名様ですか？",
+        "furigana": "いらっしゃいませ！<ruby>何名様<rt>なんめいさま</rt></ruby>ですか？",
+        "korean": "어서 오세요! 몇 분이신가요?",
+        "audioPrompt": "いらっしゃいませ！何名様ですか？"
+      },
+      {
+        "speaker": "user",
+        "japanese": "二人です。禁煙席をお願いします。",
+        "furigana": "<ruby>二人<rt>ふたり</rt></ruby>です。<ruby>禁煙席<rt>きんえんせき</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。",
+        "korean": "두 명입니다. 금연석으로 부탁드립니다.",
+        "audioPrompt": "二人です。禁煙席をお願いします。",
+        "quizOption": {
+          "blankWord": "二人",
+          "choices": ["一人", "二人", "三人", "四人"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "かしこまりました。こちらの席へどうぞ。",
+        "furigana": "かしこまりました。こちらの<ruby>席<rt>せき</rt></ruby>へどうぞ。",
+        "korean": "알겠습니다. 이쪽 자리로 앉으세요.",
+        "audioPrompt": "かしこまりました。こちらの席へどうぞ。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "すみません、おすすめのメニューは何ですか？",
+        "furigana": "すみません、おすすめのメニューは<ruby>何<rt>なん</rt></ruby>ですか？",
+        "korean": "저기요, 추천 메뉴는 무엇인가요?",
+        "audioPrompt": "すみません、おすすめのメニューは何ですか？",
+        "quizOption": {
+          "blankWord": "おすすめ",
+          "choices": ["おすすめ", "おかいけい", "おみず", "おかんじょう"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "こちらの特製ラーメンが一番人気です。",
+        "furigana": "こちらの<ruby>特製<rt>とくせい</rt></ruby>ラーメンが<ruby>一番人気<rt>いちばんにんき</rt></ruby>です。",
+        "korean": "이 특제 라멘이 가장 인기 있습니다.",
+        "audioPrompt": "こちらの特製ラーメンが一番人気です。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "じゃあ、これを一つとお水をお願いします。",
+        "furigana": "じゃあ、これを<ruby>一<rt>ひと</rt></ruby>つとお<ruby>水<rt>みず</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。",
+        "korean": "그럼 이걸로 하나랑 물 좀 부탁합니다.",
+        "audioPrompt": "じゃあ、これを一つとお水をお願いします。",
+        "quizOption": {
+          "blankWord": "一つ",
+          "choices": ["一つ", "二つ", "三つ", "四つ"]
+        }
+      },
+      {
+        "speaker": "user",
+        "japanese": "ごちそうさまでした。お会計をお願いします。",
+        "furigana": "ごちそうさまでした。お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。",
+        "korean": "잘 먹었습니다. 계산 부탁드립니다.",
+        "audioPrompt": "ごちそうさまでした。お会計をお願いします。",
+        "quizOption": {
+          "blankWord": "お会計",
+          "choices": ["お会計", "ご注文", "お席", "お土産"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "scenario_hotel",
+    "title": "호텔 체크인 및 짐 보관",
+    "situation": "호텔 프런트 데스크 체크인 및 외출 전 짐 보관 요청",
+    "dialogue": [
+      {
+        "speaker": "npc",
+        "japanese": "いらっしゃいませ。チェックインでございますか？",
+        "furigana": "いらっしゃいませ。チェックインでございますか？",
+        "korean": "어서 오십시오. 체크인이신가요?",
+        "audioPrompt": "いらっしゃいませ。チェックインでございますか？"
+      },
+      {
+        "speaker": "user",
+        "japanese": "はい、予約したキムです。パスポートはこちらです。",
+        "furigana": "はい、<ruby>予約<rt>よやく</rt></ruby>したキムです。パスポートはこちらです。",
+        "korean": "네, 예약한 김입니다. 여권 여기 있습니다.",
+        "audioPrompt": "はい、予約したキムです。パスポートはこちらです。",
+        "quizOption": {
+          "blankWord": "予約",
+          "choices": ["予約", "約束", "確認", "案内"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "確認いたしました。本日は一泊ですね。こちらが鍵でございます。",
+        "furigana": "<ruby>確認<rt>かくにん</rt></ruby>いたしました。<ruby>本日<rt>ほんじつ</rt></ruby>は<ruby>一泊<rt>いっぱく</rt></ruby>ですね。こちらが<ruby>鍵<rt>かぎ</rt></ruby>でございます。",
+        "korean": "확인했습니다. 오늘 1박이시네요. 여기 객실 열쇠입니다.",
+        "audioPrompt": "確認いたしました。本日は一泊ですね。こちらが鍵でございます。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "Wi-Fiのパスワードを教えていただけますか？",
+        "furigana": "Wi-Fiのパスワードを<ruby>教<rt>おし</rt></ruby>えていただけますか？",
+        "korean": "와이파이 비밀번호를 알려주시겠어요?",
+        "audioPrompt": "Wi-Fiのパスワードを教えていただけますか？",
+        "quizOption": {
+          "blankWord": "教えて",
+          "choices": ["教えて", "見せて", "貸して", "書いて"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "こちらのキーカードケースの裏面に記載されております。",
+        "furigana": "こちらのキーカードケースの<ruby>裏面<rt>りめん</rt></ruby>に<ruby>記載<rt>きさい</rt></ruby>されております。",
+        "korean": "여기 키 카드 케이스 뒷면에 적혀 있습니다.",
+        "audioPrompt": "こちらのキーカードケースの裏面に記載されております。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "チェックインの前に荷物を預かっていただけますか？",
+        "furigana": "チェックインの<ruby>前<rt>まえ</rt></ruby>に<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>預<rt>あず</rt></ruby>かっていただけますか？",
+        "korean": "체크인 전에 짐을 맡아주실 수 있나요?",
+        "audioPrompt": "チェックインの前に荷物を預かっていただけますか？",
+        "quizOption": {
+          "blankWord": "荷物",
+          "choices": ["荷物", "手紙", "切符", "写真"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "はい、喜んでお預かりいたします。",
+        "furigana": "はい、<ruby>喜<rt>よろこ</rt></ruby>んでお<ruby>預<rt>あず</rt></ruby>かりいたします。",
+        "korean": "네, 기꺼이 보관해 드리겠습니다.",
+        "audioPrompt": "はい、喜んでお預かりいたします。"
+      }
+    ]
+  },
+  {
+    "id": "scenario_directions",
+    "title": "길 찾기 및 교통 이용",
+    "situation": "지하철역 및 편의점 위치 묻기",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "japanese": "すみません、一番近い駅はどこですか？",
+        "furigana": "すみません、<ruby>一番<rt>いちばん</rt></ruby><ruby>近<rt>ちか</rt></ruby>い<ruby>駅<rt>えき</rt></ruby>はどこですか？",
+        "korean": "실례합니다, 가장 가까운 역은 어디인가요?",
+        "audioPrompt": "すみません、一番近い駅はどこですか？",
+        "quizOption": {
+          "blankWord": "駅",
+          "choices": ["駅", "店", "道", "家"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "この道をまっすぐ行って、二つ目の角を右に曲がってください。",
+        "furigana": "この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>行<rt>い</rt></ruby>って、<ruby>二<rt>ふた</rt></ruby>つ<ruby>目<rt>め</rt></ruby>の<ruby>角<rt>かど</rt></ruby>を<ruby>右<rt>みぎ</rt></ruby>に<ruby>曲<rt>ま</rt></ruby>がってください。",
+        "korean": "이 길을 곧장 가서, 두 번째 모퉁이에서 우회전하세요.",
+        "audioPrompt": "この道をまっすぐ行って、二つ目の角を右に曲がってください。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "ここから歩いてどのくらいかかりますか？",
+        "furigana": "ここから<ruby>歩<rt>ある</rt></ruby>いてどのくらいかかりますか？",
+        "korean": "여기서 걸어서 어느 정도 걸리나요?",
+        "audioPrompt": "ここから歩いてどのくらいかかりますか？",
+        "quizOption": {
+          "blankWord": "歩いて",
+          "choices": ["歩いて", "走って", "乗って", "急いで"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "歩いて5分くらいですよ。",
+        "furigana": "<ruby>歩<rt>ある</rt></ruby>いて<ruby>5分<rt>ごふん</rt></ruby>くらいですよ。",
+        "korean": "걸어서 5분 정도 걸립니다.",
+        "audioPrompt": "歩いて5分くらいですよ。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "近くにコンビニもありますか？",
+        "furigana": "<ruby>近<rt>ちか</rt></ruby>くにコンビニもありますか？",
+        "korean": "근처에 편의점도 있나요?",
+        "audioPrompt": "近くにコンビニもありますか？",
+        "quizOption": {
+          "blankWord": "近く",
+          "choices": ["近く", "遠く", "後ろ", "前"]
+        }
+      },
+      {
+        "speaker": "npc",
+        "japanese": "はい、駅の改札口のすぐ隣にありますよ。",
+        "furigana": "はい、<ruby>駅<rt>えき</rt></ruby>の<ruby>改札口<rt>かいさつぐち</rt></ruby>のすぐ<ruby>隣<rt>となり</rt></ruby>にありますよ。",
+        "korean": "네, 역 개찰구 바로 옆에 있습니다.",
+        "audioPrompt": "はい、駅の改札口のすぐ隣にありますよ。"
+      },
+      {
+        "speaker": "user",
+        "japanese": "親切にありがとうございます！",
+        "furigana": "<ruby>親切<rt>しんせつ</rt></ruby>にありがとうございます！",
+        "korean": "친절히 알려주셔서 감사합니다!",
+        "audioPrompt": "親切にありがとうございます！",
+        "quizOption": {
+          "blankWord": "親切",
+          "choices": ["親切", "元気", "便利", "有名"]
+        }
+      }
+    ]
+  }
+]
