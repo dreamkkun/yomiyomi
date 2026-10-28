@@ -25,6 +25,15 @@ interface Sound {
   playVictory: () => void;
 }
 
+/** 소리·음성·저장 같은 부가 동작이 실패해도 게임 입력이 멈추지 않도록 감싼다 */
+const safely = (fn: () => void) => {
+  try {
+    fn();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const shuffle = <T,>(arr: T[]): T[] => {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -179,7 +188,7 @@ export function useKanaMatchEngine(script: MatchScript, sound: Sound) {
         return;
       }
 
-      sound.playFlip();
+      safely(() => sound.playFlip());
       const nextCards = cards.map((c) => (c.uid === uid ? { ...c, isFlipped: true } : c));
       const selected = nextCards.filter((c) => c.isFlipped && !c.isMatched);
       if (selected.length < 2) {
@@ -187,9 +196,9 @@ export function useKanaMatchEngine(script: MatchScript, sound: Sound) {
         return;
       }
 
-      // 두 장이 골라졌다: 검증하는 동안 입력을 잠근다
+      // 두 장이 골라졌다. 정답이면 카드가 바로 사라지므로 입력을 막지 않고(다음 짝을 곧바로 고를 수 있다),
+      // 오답일 때만 틀린 카드를 보여 주는 동안 잠깐 입력을 잠근다
       const [a, b] = selected;
-      setIsLocked(true);
 
       if (a.pairId === b.pairId) {
         const nextCombo = stats.combo + 1;
@@ -213,19 +222,24 @@ export function useKanaMatchEngine(script: MatchScript, sound: Sound) {
         setStats(nextStats);
         if (nextCombo >= 2) setComboPopup({ key: Date.now(), value: nextCombo });
 
-        sound.playMatch();
-        speak((a.type === 'char' ? a : b).display); // 맞힌 문자의 발음
+        safely(() => sound.playMatch());
+        safely(() => speak((a.type === 'char' ? a : b).display)); // 맞힌 문자의 발음
 
         if (isCleared) {
-          sound.playVictory();
+          safely(() => sound.playVictory());
           settle(nextStats, true);
         }
-        later(() => {
-          setIsLocked(false);
-          setComboPopup(null);
-        }, INPUT_LOCK_MS);
+        later(() => setComboPopup(null), INPUT_LOCK_MS);
       } else {
-        sound.playMismatch();
+        // 잠금 해제를 가장 먼저 예약한다: 아래의 소리/저장 처리에서 문제가 생겨도 입력이 영영 잠기지 않게 한다
+        setIsLocked(true);
+        later(() => {
+          setCards(cardsRef.current.map((c) => (c.uid === a.uid || c.uid === b.uid ? { ...c, isFlipped: false } : c)));
+          setMismatchUids([]);
+          setIsLocked(false);
+        }, INPUT_LOCK_MS);
+
+        safely(() => sound.playMismatch());
         // 잘못 짝지은 두 글자는 모두 오답 노트(SRS)에 등록된다
         const mistakes = [a.pairId, b.pairId].flatMap<SrsItemInput>((pairId) => {
           const k = getKanaById(pairId);
@@ -233,15 +247,10 @@ export function useKanaMatchEngine(script: MatchScript, sound: Sound) {
             ? [{ id: k.id, type: 'kana', japanese: k.char, furigana: k.char, korean: k.korean, romaji: k.romaji }]
             : [];
         });
-        recordMistake(...mistakes);
         setCards(nextCards);
         setMismatchUids([a.uid, b.uid]);
         setStats({ ...stats, combo: 0, isFever: false }); // 오답은 콤보와 피버를 즉시 리셋
-        later(() => {
-          setCards(cardsRef.current.map((c) => (c.uid === a.uid || c.uid === b.uid ? { ...c, isFlipped: false } : c)));
-          setMismatchUids([]);
-          setIsLocked(false);
-        }, INPUT_LOCK_MS);
+        safely(() => recordMistake(...mistakes));
       }
     },
     [sound, speak, settle, later, setCards, setStats, setIsLocked, recordMistake],
