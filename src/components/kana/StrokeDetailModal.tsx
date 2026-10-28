@@ -104,6 +104,14 @@ export default function StrokeDetailModal({ kana, memorized, onClose, onToggleMe
               aria-label="학습 방식"
               className="relative z-10 mb-4 grid w-full grid-cols-2 rounded-xl border border-zinc-200/60 bg-zinc-100 p-1"
             >
+              {/* 활성 탭 배경 캡슐: CSS 로 미끄러진다.
+                  (framer-motion layoutId 공유 레이아웃 애니메이션은 모달 퇴장 애니메이션을 붙잡아 모달이 닫히지 않는 문제가 있었다) */}
+              <span
+                aria-hidden
+                className={`absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] rounded-lg bg-white shadow-sm transition-transform duration-200 ease-out ${
+                  activeTab === 'trace' ? 'translate-x-full' : 'translate-x-0'
+                }`}
+              />
               {TABS.map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
@@ -117,13 +125,6 @@ export default function StrokeDetailModal({ kana, memorized, onClose, onToggleMe
                 >
                   <Icon className="h-3.5 w-3.5" />
                   <span>{label}</span>
-                  {activeTab === id && (
-                    <motion.div
-                      layoutId="activeModalTabIndicator"
-                      className="absolute inset-0 -z-10 rounded-lg bg-white shadow-sm"
-                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                    />
-                  )}
                 </button>
               ))}
             </div>
