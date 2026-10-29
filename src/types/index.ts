@@ -28,6 +28,7 @@ export interface UserProgressState {
   completedChars: string[];
   completedScenarioIds: string[];
   memorizedWordIds: string[];
+  masteredPatternIds: string[];
   miniGameStats: { kanaMatch: MiniGameRecord };
   srsItems: Record<string, SrsItem>;
   badges: Badge[];

@@ -1,9 +1,10 @@
-import { BookA, BrainCircuit, Languages, MessageSquareQuote, User } from 'lucide-react';
+import { BookA, Blocks, BrainCircuit, Languages, MessageSquareQuote, User } from 'lucide-react';
 import type { NavTabItem } from '@/types/navigation';
 
 export const NAV_TABS: NavTabItem[] = [
   { id: 'kana', label: '문자', href: '/kana', icon: Languages },
   { id: 'vocab', label: '단어장', href: '/vocab', icon: BookA },
+  { id: 'patterns', label: '문형', href: '/patterns', icon: Blocks },
   { id: 'conversation', label: '롤플레잉', href: '/conversation', icon: MessageSquareQuote },
   { id: 'review', label: '복습', href: '/review', icon: BrainCircuit },
   { id: 'profile', label: '대시보드', href: '/profile', icon: User },

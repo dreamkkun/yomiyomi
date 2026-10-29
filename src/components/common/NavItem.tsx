@@ -16,9 +16,9 @@ export default function NavItem({ tab, isActive }: Props) {
     <Link
       href={tab.href}
       aria-current={isActive ? 'page' : undefined}
-      className="group relative flex h-full flex-1 select-none flex-col items-center justify-center py-1"
+      className="group relative flex h-full min-w-0 flex-1 select-none flex-col items-center justify-center py-1"
     >
-      <div className="relative flex h-7 w-12 items-center justify-center">
+      <div className="relative flex h-7 w-11 items-center justify-center">
         {isActive && (
           <motion.div
             layoutId="activeTabPill"
@@ -43,7 +43,7 @@ export default function NavItem({ tab, isActive }: Props) {
       </div>
 
       <span
-        className={`mt-0.5 text-[10px] tracking-tight transition-colors duration-200 ${
+        className={`mt-0.5 max-w-full truncate px-0.5 text-[10px] tracking-tight transition-colors duration-200 ${
           isActive ? 'font-bold text-emerald-600' : 'font-medium text-zinc-400 group-hover:text-zinc-600'
         }`}
       >

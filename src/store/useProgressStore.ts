@@ -24,6 +24,8 @@ interface ProgressStore extends UserProgressState, VocabProgressState {
   /** 오답을 SRS 오답 노트에 등록한다: 새 항목이면 신규 삽입, 이미 있으면 난이도를 올리고 오늘 복습 대상으로 되돌린다 */
   recordMistake: (item: SrsItemInput) => void;
   updateSrsReview: (id: string, rating: SrsRating) => void;
+  /** 문형 3단계를 모두 통과했을 때 마스터로 등록하고 +40 XP (이미 마스터한 문형은 XP 없이 true/false 만 돌려준다) */
+  completePattern: (patternId: string) => { earnedXp: number; isFirstMaster: boolean };
   /** 복습 세션 완료 보상(+XP)과 스트릭 반영 */
   completeSrsSession: (params: { totalReviewed: number; graduatedCount: number }) => SrsSessionResult;
   resetProgress: () => void;
@@ -32,6 +34,7 @@ interface ProgressStore extends UserProgressState, VocabProgressState {
 export const FIRST_COMPLETION_XP = 100;
 export const REVIEW_XP = 30;
 export const SRS_SESSION_XP = 60;
+export const PATTERN_MASTER_XP = 40;
 
 const initial: UserProgressState = {
   streakDays: 0,
@@ -39,6 +42,7 @@ const initial: UserProgressState = {
   completedChars: [],
   completedScenarioIds: [],
   memorizedWordIds: [],
+  masteredPatternIds: [],
   srsItems: {},
   miniGameStats: {
     kanaMatch: { highScore: 0, gamesPlayed: 0, gamesCleared: 0, lastPlayedAt: null },
@@ -222,6 +226,19 @@ export const useProgressStore = create<ProgressStore>()(
             [id]: { ...item, ...calculateNextSrsState(item, rating, now), lastReviewedAt: toDateString(now) },
           },
         });
+      },
+
+      completePattern: (patternId) => {
+        const state = get();
+        if (state.masteredPatternIds.includes(patternId)) return { earnedXp: 0, isFirstMaster: false };
+        const { today, streak } = computeStreak(state.lastStudyDate, state.streakDays, new Date());
+        set({
+          masteredPatternIds: [...state.masteredPatternIds, patternId],
+          totalScore: state.totalScore + PATTERN_MASTER_XP,
+          streakDays: streak,
+          lastStudyDate: today,
+        });
+        return { earnedXp: PATTERN_MASTER_XP, isFirstMaster: true };
       },
 
       completeSrsSession: ({ totalReviewed, graduatedCount }) => {

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "pat_01_doko",
+    "patternFormula": "[장소] + はどこですか？",
+    "patternMeaning": "~은/는 어디인가요?",
+    "grammarTip": "장소 단어 뒤에 'は(와)'와 'どこですか(도코데스카)'를 붙이면 길 찾기 문장이 완성됩니다.",
+    "fixedSuffix": { "japanese": "はどこですか？", "furigana": "はどこですか？" },
+    "suffixParts": [
+      { "japanese": "は", "furigana": "は" },
+      { "japanese": "どこですか？", "furigana": "どこですか？" }
+    ],
+    "wrongParticles": ["を", "に"],
+    "koreanTemplate": "{N:은/는} 어디인가요?",
+    "slotType": "noun_place",
+    "correctChunks": [
+      { "id": "c_place_01", "japanese": "駅", "furigana": "<ruby>駅<rt>えき</rt></ruby>", "korean": "지하철역", "romaji": "eki" },
+      { "id": "c_place_02", "japanese": "トイレ", "furigana": "トイレ", "korean": "화장실", "romaji": "toire" },
+      { "id": "c_place_03", "japanese": "コンビニ", "furigana": "コンビニ", "korean": "편의점", "romaji": "konbini" }
+    ],
+    "distractorChunks": [
+      { "id": "c_dist_01", "japanese": "水", "furigana": "<ruby>水<rt>みず</rt></ruby>", "korean": "물", "romaji": "mizu" }
+    ],
+    "relatedScenarioId": "scenario_directions"
+  },
+  {
+    "id": "pat_02_kudasai",
+    "patternFormula": "[사물] + をください",
+    "patternMeaning": "~을/를 주세요",
+    "grammarTip": "식당이나 가게에서 원하는 물건 뒤에 'を(오) + ください(쿠다사이)'만 붙이면 주문이 끝납니다.",
+    "fixedSuffix": { "japanese": "をください。", "furigana": "をください。" },
+    "suffixParts": [
+      { "japanese": "を", "furigana": "を" },
+      { "japanese": "ください。", "furigana": "ください。" }
+    ],
+    "wrongParticles": ["は", "に"],
+    "koreanTemplate": "{N:을/를} 주세요.",
+    "slotType": "noun_item",
+    "correctChunks": [
+      { "id": "c_item_01", "japanese": "お水", "furigana": "お<ruby>水<rt>みず</rt></ruby>", "korean": "물", "romaji": "omizu" },
+      { "id": "c_item_02", "japanese": "メニュー", "furigana": "メニュー", "korean": "메뉴판", "romaji": "menyuu" },
+      { "id": "c_item_03", "japanese": "これ", "furigana": "これ", "korean": "이것", "romaji": "kore" }
+    ],
+    "distractorChunks": [
+      { "id": "c_dist_02", "japanese": "駅", "furigana": "<ruby>駅<rt>えき</rt></ruby>", "korean": "지하철역", "romaji": "eki" }
+    ],
+    "relatedScenarioId": "scenario_restaurant"
+  },
+  {
+    "id": "pat_03_onegai",
+    "patternFormula": "[서비스/수량] + をお願いします",
+    "patternMeaning": "~을/를 부탁드립니다",
+    "grammarTip": "'ください'보다 더 정중한 표현으로 계산, 짐 보관, 체크인 시 폭넓게 사용됩니다.",
+    "fixedSuffix": { "japanese": "をお願いします。", "furigana": "をお<ruby>願<rt>ねが</rt></ruby>いします。" },
+    "suffixParts": [
+      { "japanese": "を", "furigana": "を" },
+      { "japanese": "お願いします。", "furigana": "お<ruby>願<rt>ねが</rt></ruby>いします。" }
+    ],
+    "wrongParticles": ["は", "が"],
+    "koreanTemplate": "{N:을/를} 부탁드립니다.",
+    "slotType": "noun_item",
+    "correctChunks": [
+      { "id": "c_srv_01", "japanese": "お会計", "furigana": "お<ruby>会計<rt>かいけい</rt></ruby>", "korean": "계산", "romaji": "okaikei" },
+      { "id": "c_srv_02", "japanese": "チェックイン", "furigana": "チェックイン", "korean": "체크인", "romaji": "chekkuin" },
+      { "id": "c_srv_03", "japanese": "予約", "furigana": "<ruby>予約<rt>よやく</rt></ruby>", "korean": "예약", "romaji": "yoyaku" }
+    ],
+    "distractorChunks": [
+      { "id": "c_dist_03", "japanese": "どこ", "furigana": "どこ", "korean": "어디", "romaji": "doko" }
+    ],
+    "relatedScenarioId": "scenario_hotel"
+  },
+  {
+    "id": "pat_04_ikitai",
+    "patternFormula": "[장소] + に行きたいです",
+    "patternMeaning": "~에 가고 싶어요",
+    "grammarTip": "가고 싶은 장소 뒤에 'に(니)'를 붙이고 '行きたいです(이키타이데스)'로 끝내면 목적지를 말하는 문장이 됩니다.",
+    "fixedSuffix": { "japanese": "に行きたいです。", "furigana": "に<ruby>行<rt>い</rt></ruby>きたいです。" },
+    "suffixParts": [
+      { "japanese": "に", "furigana": "に" },
+      { "japanese": "行きたいです。", "furigana": "<ruby>行<rt>い</rt></ruby>きたいです。" }
+    ],
+    "wrongParticles": ["を", "は"],
+    "koreanTemplate": "{N}에 가고 싶어요.",
+    "slotType": "noun_place",
+    "correctChunks": [
+      { "id": "c_go_01", "japanese": "駅", "furigana": "<ruby>駅<rt>えき</rt></ruby>", "korean": "지하철역", "romaji": "eki" },
+      { "id": "c_go_02", "japanese": "ホテル", "furigana": "ホテル", "korean": "호텔", "romaji": "hoteru" },
+      { "id": "c_go_03", "japanese": "空港", "furigana": "<ruby>空港<rt>くうこう</rt></ruby>", "korean": "공항", "romaji": "kuukou" }
+    ],
+    "distractorChunks": [
+      { "id": "c_dist_04", "japanese": "お水", "furigana": "お<ruby>水<rt>みず</rt></ruby>", "korean": "물", "romaji": "omizu" }
+    ],
+    "relatedScenarioId": "scenario_directions"
+  },
+  {
+    "id": "pat_05_ikura",
+    "patternFormula": "[사물] + はいくらですか？",
+    "patternMeaning": "~은/는 얼마예요?",
+    "grammarTip": "물건 뒤에 'は'를 붙이고 'いくらですか(이쿠라데스카)'를 이으면 가격을 묻는 가장 기본 문장입니다.",
+    "fixedSuffix": { "japanese": "はいくらですか？", "furigana": "はいくらですか？" },
+    "suffixParts": [
+      { "japanese": "は", "furigana": "は" },
+      { "japanese": "いくらですか？", "furigana": "いくらですか？" }
+    ],
+    "wrongParticles": ["を", "に"],
+    "koreanTemplate": "{N:은/는} 얼마예요?",
+    "slotType": "noun_item",
+    "correctChunks": [
+      { "id": "c_price_01", "japanese": "これ", "furigana": "これ", "korean": "이것", "romaji": "kore" },
+      { "id": "c_price_02", "japanese": "お水", "furigana": "お<ruby>水<rt>みず</rt></ruby>", "korean": "물", "romaji": "omizu" },
+      { "id": "c_price_03", "japanese": "メニュー", "furigana": "メニュー", "korean": "메뉴판", "romaji": "menyuu" }
+    ],
+    "distractorChunks": [
+      { "id": "c_dist_05", "japanese": "駅", "furigana": "<ruby>駅<rt>えき</rt></ruby>", "korean": "지하철역", "romaji": "eki" }
+    ],
+    "relatedScenarioId": "scenario_restaurant"
+  }
+]
