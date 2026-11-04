@@ -46,10 +46,10 @@ export function PatternCompletionModal({
 
             <div className="mb-5 rounded-2xl border border-emerald-200/90 bg-gradient-to-br from-emerald-50/80 via-teal-50/40 to-slate-50 p-4 text-left shadow-sm">
               <div className="mb-1.5 flex items-center justify-between">
-                <span className="rounded-md bg-emerald-600 px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                <span className="rounded-md bg-emerald-600 px-2 py-0.5 text-xs font-bold uppercase text-white">
                   실전 추천 단계
                 </span>
-                <span className="text-[11px] font-semibold text-emerald-800">{scenario.situation}</span>
+                <span className="text-xs font-semibold text-emerald-800">{scenario.situation}</span>
               </div>
 
               <div className="mt-2 flex items-start gap-2">
@@ -58,7 +58,7 @@ export function PatternCompletionModal({
                 </div>
                 <div className="min-w-0">
                   <h4 className="truncate text-sm font-extrabold text-zinc-900">{scenario.title}</h4>
-                  <p className="mt-0.5 text-[11px] leading-relaxed text-zinc-600">
+                  <p className="mt-0.5 text-xs leading-relaxed text-zinc-600">
                     방금 익힌{' '}
                     <span className="font-bold text-emerald-700 underline underline-offset-2">
                       {scenario.highlightExpression}

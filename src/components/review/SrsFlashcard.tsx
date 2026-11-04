@@ -51,7 +51,7 @@ export default function SrsFlashcard({ item, flipped, showFurigana, intervals, o
           {/* 앞면: 일본어 */}
           <div className={`${face} border-zinc-200 bg-white`}>
             <div className="flex items-center justify-between">
-              <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-[10px] font-bold text-amber-700">
+              <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs font-bold text-amber-700">
                 {TYPE_LABEL[item.type]} · 오답 {item.mistakeCount}회
               </span>
               <button
@@ -62,7 +62,7 @@ export default function SrsFlashcard({ item, flipped, showFurigana, intervals, o
                   e.stopPropagation();
                   onSpeak(item.japanese);
                 }}
-                className="rounded-full p-2 text-zinc-400 transition-colors hover:bg-zinc-50 hover:text-emerald-600"
+                className="rounded-full p-2 text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-emerald-600"
               >
                 <Volume2 className="h-5 w-5" />
               </button>
@@ -73,10 +73,10 @@ export default function SrsFlashcard({ item, flipped, showFurigana, intervals, o
                 {/* 회화 빈칸 오답은 그 단어를 가려서 다시 떠올리게 한다 */}
                 <RubyText htmlContent={item.furigana} blank={item.blankWord} />
               </div>
-              {item.romaji && <p className="mt-1 text-xs font-medium text-zinc-400">{item.romaji}</p>}
+              {item.romaji && <p className="mt-1 text-xs font-medium text-zinc-500">{item.romaji}</p>}
             </div>
 
-            <div className="flex items-center justify-center gap-1.5 border-t border-zinc-100 pt-3 text-xs text-zinc-400">
+            <div className="flex items-center justify-center gap-1.5 border-t border-zinc-100 pt-3 text-xs text-zinc-500">
               <RotateCcw className="h-3.5 w-3.5" />
               <span>카드를 탭하여 뜻 확인하기</span>
             </div>
@@ -85,7 +85,7 @@ export default function SrsFlashcard({ item, flipped, showFurigana, intervals, o
           {/* 뒷면: 한국어 뜻과 예문 */}
           <div className={`${face} border-emerald-200 bg-emerald-50 [transform:rotateY(180deg)]`}>
             <div className="flex items-center justify-between">
-              <span className="rounded-full border border-emerald-100 bg-white px-2.5 py-0.5 text-[10px] font-bold text-emerald-800">
+              <span className="rounded-full border border-emerald-100 bg-white px-2.5 py-0.5 text-xs font-bold text-emerald-800">
                 정답 및 해설
               </span>
               <button
@@ -111,12 +111,12 @@ export default function SrsFlashcard({ item, flipped, showFurigana, intervals, o
               {item.exampleSentence && (
                 <div className="mt-3 rounded-2xl border border-emerald-100 bg-white/80 p-3 text-left text-xs">
                   <p className="font-semibold text-zinc-800">{item.exampleSentence.jp}</p>
-                  <p className="mt-0.5 text-[11px] text-zinc-500">{item.exampleSentence.kr}</p>
+                  <p className="mt-0.5 text-xs text-zinc-500">{item.exampleSentence.kr}</p>
                 </div>
               )}
             </div>
 
-            <div className="border-t border-emerald-200/60 pt-2 text-center text-[11px] font-medium text-emerald-700">
+            <div className="border-t border-emerald-200/60 pt-2 text-center text-xs font-medium text-emerald-700">
               아래 버튼으로 기억 강도를 선택하세요
             </div>
           </div>
@@ -133,12 +133,12 @@ export default function SrsFlashcard({ item, flipped, showFurigana, intervals, o
               className={`flex min-h-16 flex-col items-center justify-center rounded-2xl border-2 p-2 text-center transition-all active:scale-95 ${r.className}`}
             >
               <span className="text-xs font-black">{r.label}</span>
-              <span className="mt-0.5 text-[10px] leading-tight opacity-80">{r.hint}</span>
+              <span className="mt-0.5 text-xs leading-tight opacity-80">{r.hint}</span>
             </button>
           ))}
         </div>
       ) : (
-        <p className="mt-5 text-center text-xs font-medium text-zinc-400">뜻을 떠올린 뒤 카드를 뒤집어 확인하세요</p>
+        <p className="mt-5 text-center text-xs font-medium text-zinc-500">뜻을 떠올린 뒤 카드를 뒤집어 확인하세요</p>
       )}
     </div>
   );

@@ -47,7 +47,7 @@ export function DueReviewBanner({ className = '', showAllCompletedState = false,
 
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
-                    <span className="rounded-md bg-emerald-200/60 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-800">
+                    <span className="rounded-md bg-emerald-200/60 px-1.5 py-0.5 text-xs font-bold uppercase tracking-wider text-emerald-800">
                       SRS 복습
                     </span>
                     <span className="truncate text-xs font-semibold text-emerald-900">망각 방지 타이머 가동 중</span>
@@ -85,10 +85,10 @@ export function DueReviewBanner({ className = '', showAllCompletedState = false,
               <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
               <div>
                 <h4 className="text-xs font-bold text-zinc-800">오늘의 복습을 모두 마쳤습니다!</h4>
-                <p className="text-[11px] text-zinc-400">다음 복습일에 맞춰 자동으로 알려드릴게요.</p>
+                <p className="text-xs text-zinc-500">다음 복습일에 맞춰 자동으로 알려드릴게요.</p>
               </div>
             </div>
-            <div className="flex shrink-0 items-center gap-1 rounded-lg border border-zinc-200/60 bg-zinc-50 px-2.5 py-1 text-[11px] font-bold text-zinc-500">
+            <div className="flex shrink-0 items-center gap-1 rounded-lg border border-zinc-200/60 bg-zinc-50 px-2.5 py-1 text-xs font-bold text-zinc-500">
               <Sparkles className="h-3 w-3 text-amber-500" />
               <span>완료됨</span>
             </div>

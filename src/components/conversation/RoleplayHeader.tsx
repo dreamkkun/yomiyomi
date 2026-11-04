@@ -60,7 +60,7 @@ export default function RoleplayHeader({
         <button
           type="button"
           onClick={onReset}
-          className="p-2 text-zinc-400 transition-colors hover:text-zinc-600"
+          className="p-2 text-zinc-500 transition-colors hover:text-zinc-600"
           title="처음부터 다시하기"
           aria-label="처음부터 다시하기"
         >

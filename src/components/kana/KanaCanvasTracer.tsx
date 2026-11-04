@@ -93,10 +93,10 @@ export default function KanaCanvasTracer({ kana, onComplete, showTitle = true }:
           {showTitle && (
             <>
               <span className="text-sm font-black text-zinc-900">{kana.char}</span>
-              <span className="text-xs font-medium text-zinc-400">({kana.romaji})</span>
+              <span className="text-xs font-medium text-zinc-500">({kana.romaji})</span>
             </>
           )}
-          <span className="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+          <span className="rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-xs font-bold text-emerald-700">
             {finished ? '완성' : `${currentIndex + 1} / ${kana.strokes.length}획`}
           </span>
         </div>
@@ -108,7 +108,7 @@ export default function KanaCanvasTracer({ kana, onComplete, showTitle = true }:
             aria-pressed={showGuide}
             title="가이드 표시 전환"
             aria-label="가이드 표시 전환"
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
           >
             {showGuide ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
           </button>
@@ -117,7 +117,7 @@ export default function KanaCanvasTracer({ kana, onComplete, showTitle = true }:
             onClick={resetStroke}
             title="획 초기화"
             aria-label="획 초기화"
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
           >
             <RotateCcw className="h-4 w-4" />
           </button>

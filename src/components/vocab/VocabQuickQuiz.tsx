@@ -55,7 +55,7 @@ export default function VocabQuickQuiz({ words, pool, onExit }: Props) {
 
   return (
     <div className="w-full max-w-sm rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-      <div className="mb-4 flex items-center justify-between text-xs font-bold text-zinc-400">
+      <div className="mb-4 flex items-center justify-between text-xs font-bold text-zinc-500">
         <span>스피드 단어 퀴즈</span>
         <span className="flex items-center gap-3">
           {quiz.combo > 0 && (

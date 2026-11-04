@@ -30,7 +30,7 @@ export default function WordChunkBank({ blocks, disabled, onTap }: Props) {
               <RubyText htmlContent={block.furigana} />
             </span>
             {block.korean && (
-              <span className="block text-[11px] font-medium text-zinc-500">
+              <span className="block text-xs font-medium text-zinc-500">
                 {block.korean} ({block.romaji})
               </span>
             )}

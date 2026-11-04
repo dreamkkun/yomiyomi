@@ -19,7 +19,7 @@ export default function KanaMatrix({ rows, columnCount, memorizedIds, onSelect }
     <div className="space-y-2">
       {rows.map((row) => (
         <div key={row.key} className="flex items-stretch gap-2">
-          <div className="flex w-9 shrink-0 items-center justify-center text-[11px] font-bold text-zinc-400">
+          <div className="flex w-9 shrink-0 items-center justify-center text-xs font-bold text-zinc-500">
             {row.label}
           </div>
           <div className={`grid flex-1 gap-2 ${GRID_COLS[columnCount] ?? 'grid-cols-5'}`}>

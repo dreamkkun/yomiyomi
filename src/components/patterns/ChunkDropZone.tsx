@@ -38,7 +38,7 @@ export default function ChunkDropZone({
         correct ? 'border-emerald-500 ring-4 ring-emerald-200/60' : status === 'wrong' ? 'border-rose-400' : 'border-zinc-200'
       }`}
     >
-      <div className="flex w-full items-center justify-between text-xs text-zinc-400">
+      <div className="flex w-full items-center justify-between text-xs text-zinc-500">
         <span className="font-semibold">{hint}</span>
         {previewJapanese && (
           <button

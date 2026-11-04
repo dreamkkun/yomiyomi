@@ -20,7 +20,7 @@
   /* 2. 후리가나 발음 텍스트 최적화 */
   rt {
     display: ruby-text;
-    font-size: 0.6em; /* 본문 크기의 60% 비율 */
+    font-size: max(0.6em, 11px); /* 본문의 60% 비율, 단 11px 아래로는 줄이지 않는다 */
     line-height: 1; /* rt 자체 높이 최소화 */
     text-align: center;
     font-weight: 500;

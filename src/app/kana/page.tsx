@@ -76,7 +76,7 @@ export default function KanaPage() {
           onSelect={handleSelect}
         />
 
-        <p className="mt-6 text-center text-[11px] text-zinc-400">
+        <p className="mt-6 text-center text-xs text-zinc-500">
           획순 데이터: KanjiVG (© Ulrich Apel, CC BY-SA 3.0) ·{' '}
           <a
             href="https://kanjivg.tagaini.net"

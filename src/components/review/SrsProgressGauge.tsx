@@ -43,7 +43,7 @@ export default function SrsProgressGauge({ completed, total, mastery }: Props) {
           <span className="text-lg font-black text-zinc-900">
             {completed}/{total}
           </span>
-          <span className="text-[10px] font-semibold text-zinc-400">개 완료</span>
+          <span className="text-xs font-semibold text-zinc-500">개 완료</span>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function SrsProgressGauge({ completed, total, mastery }: Props) {
         <p className="text-sm font-black text-zinc-900">
           오늘 복습 {completed}/{total}개
         </p>
-        <p className="mb-2 text-[11px] text-zinc-500">오답 노트 {mastery.total}개의 숙련도</p>
+        <p className="mb-2 text-xs text-zinc-500">오답 노트 {mastery.total}개의 숙련도</p>
 
         {mastery.total > 0 ? (
           <>
@@ -60,14 +60,14 @@ export default function SrsProgressGauge({ completed, total, mastery }: Props) {
               <div className="bg-amber-400" style={{ width: `${(mastery.learning / mastery.total) * 100}%` }} />
               <div className="bg-emerald-500" style={{ width: `${(mastery.mastered / mastery.total) * 100}%` }} />
             </div>
-            <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-[10px] font-semibold text-zinc-500">
+            <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-xs font-semibold text-zinc-500">
               <span>🔴 신규 {mastery.fresh}</span>
               <span>🟡 학습 중 {mastery.learning}</span>
               <span>🟢 마스터 {mastery.mastered}</span>
             </div>
           </>
         ) : (
-          <p className="text-[11px] text-zinc-400">아직 틀린 문제가 없어요.</p>
+          <p className="text-xs text-zinc-500">아직 틀린 문제가 없어요.</p>
         )}
       </div>
     </div>

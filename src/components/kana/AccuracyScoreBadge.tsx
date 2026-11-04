@@ -22,8 +22,8 @@ export default function AccuracyScoreBadge({ evaluations, strokeCount, average }
           return (
             <span
               key={i}
-              className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${
-                ev ? tone(ev.score) : 'bg-zinc-100 text-zinc-400'
+              className={`rounded-full px-2 py-0.5 text-xs font-bold ${
+                ev ? tone(ev.score) : 'bg-zinc-100 text-zinc-500'
               }`}
             >
               {i + 1}획 {ev ? ev.score : '-'}
@@ -48,7 +48,7 @@ export default function AccuracyScoreBadge({ evaluations, strokeCount, average }
             transition={{ duration: 0.4 }}
           />
         </div>
-        <span className="w-14 text-right text-[11px] font-bold text-zinc-600">평균 {average}점</span>
+        <span className="w-14 text-right text-xs font-bold text-zinc-600">평균 {average}점</span>
       </div>
     </div>
   );

@@ -87,11 +87,11 @@ export default function RewardModal({ isOpen, reward, onRestart, onGoHome }: Pro
                   <div className="flex items-center gap-3">
                     <BadgeIcon badge={reward.newBadge} />
                     <div className="flex-1 text-left">
-                      <span className="rounded-full bg-emerald-100/80 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                      <span className="rounded-full bg-emerald-100/80 px-2 py-0.5 text-xs font-bold text-emerald-700">
                         신규 뱃지 달성!
                       </span>
                       <h4 className="mt-0.5 text-sm font-bold text-zinc-900">{reward.newBadge.name}</h4>
-                      <p className="text-[11px] text-zinc-500">{reward.newBadge.description}</p>
+                      <p className="text-xs text-zinc-500">{reward.newBadge.description}</p>
                     </div>
                   </div>
                 </motion.div>

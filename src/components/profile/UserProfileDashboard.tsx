@@ -55,7 +55,7 @@ export default function UserProfileDashboard() {
         <div className="mb-5 flex items-center gap-4">
           <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white shadow-md shadow-emerald-500/20">
             <Sparkles className="h-8 w-8" />
-            <div className="absolute -bottom-1 -right-1 rounded-full border-2 border-white bg-zinc-900 px-2 py-0.5 text-[10px] font-black text-white">
+            <div className="absolute -bottom-1 -right-1 rounded-full border-2 border-white bg-zinc-900 px-2 py-0.5 text-xs font-black text-white">
               Lv.{stats.currentLevel}
             </div>
           </div>

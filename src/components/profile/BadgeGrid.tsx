@@ -47,7 +47,7 @@ export default function BadgeGrid({ badges, onSelect }: Props) {
             <h3 className={`mt-2 text-xs font-bold ${unlocked ? 'text-zinc-900' : 'text-zinc-500'}`}>
               {badge.name}
             </h3>
-            <p className="mt-0.5 text-[11px] leading-snug text-zinc-500">
+            <p className="mt-0.5 text-xs leading-snug text-zinc-500">
               {unlocked ? `${formatDate(badge.unlockedAt!)} 달성` : badge.requirementText}
             </p>
           </motion.button>

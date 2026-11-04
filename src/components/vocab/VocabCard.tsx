@@ -39,7 +39,7 @@ export default function VocabCard({ word, flipped, memorized, onFlip, onToggleMe
         {/* 앞면: 일본어 */}
         <div className={`${face} border-zinc-200 bg-white`}>
           <div className="flex items-center justify-between">
-            <span className="rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700">
+            <span className="rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
               {categoryLabel(word.category)}
             </span>
             <div className="flex items-center gap-1">
@@ -52,7 +52,7 @@ export default function VocabCard({ word, flipped, memorized, onFlip, onToggleMe
                   e.stopPropagation();
                   onSpeak(word.japanese);
                 }}
-                className="rounded-full p-2 text-zinc-400 transition-colors hover:bg-zinc-50 hover:text-emerald-600"
+                className="rounded-full p-2 text-zinc-500 transition-colors hover:bg-zinc-50 hover:text-emerald-600"
               >
                 <Volume2 className="h-5 w-5" />
               </button>
@@ -63,10 +63,10 @@ export default function VocabCard({ word, flipped, memorized, onFlip, onToggleMe
             <div className="text-[32px] font-extrabold leading-[1.85] tracking-wide text-zinc-900">
               <RubyText htmlContent={word.furigana} />
             </div>
-            <p className="mt-1 text-xs font-medium tracking-wider text-zinc-400">{word.romaji}</p>
+            <p className="mt-1 text-xs font-medium tracking-wider text-zinc-500">{word.romaji}</p>
           </div>
 
-          <div className="flex items-center gap-1 border-t border-zinc-100 pt-3 text-xs text-zinc-400">
+          <div className="flex items-center gap-1 border-t border-zinc-100 pt-3 text-xs text-zinc-500">
             <RotateCw className="h-3.5 w-3.5" /> 탭하여 뒤집기
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function VocabCard({ word, flipped, memorized, onFlip, onToggleMe
         {/* 뒷면: 한국어 뜻과 예문 */}
         <div className={`${face} border-emerald-200 bg-emerald-50 [transform:rotateY(180deg)]`}>
           <div className="flex items-center justify-between">
-            <span className="rounded-full border border-emerald-100 bg-white px-2.5 py-1 text-[11px] font-bold text-emerald-800">
+            <span className="rounded-full border border-emerald-100 bg-white px-2.5 py-1 text-xs font-bold text-emerald-800">
               한국어 해석
             </span>
             <button
@@ -96,7 +96,7 @@ export default function VocabCard({ word, flipped, memorized, onFlip, onToggleMe
             <p className="mt-0.5 text-xs text-emerald-700/70">{word.romaji}</p>
             <div className="mt-3 rounded-2xl border border-emerald-100/60 bg-white/80 p-3 text-left">
               <p className="text-xs font-semibold text-zinc-800">{word.example.jp}</p>
-              <p className="mt-1 text-[11px] text-zinc-500">{word.example.kr}</p>
+              <p className="mt-1 text-xs text-zinc-500">{word.example.kr}</p>
             </div>
           </div>
 
@@ -111,7 +111,7 @@ export default function VocabCard({ word, flipped, memorized, onFlip, onToggleMe
                 e.stopPropagation();
                 onToggleMemorize();
               }}
-              className={`flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-[11px] font-bold transition-colors ${
+              className={`flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-bold transition-colors ${
                 memorized
                   ? 'bg-emerald-600 text-white'
                   : 'border border-emerald-200 bg-white text-emerald-800 hover:bg-emerald-100'

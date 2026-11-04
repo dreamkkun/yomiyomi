@@ -23,7 +23,7 @@ export default function PatternSelector({ patterns, currentIndex, masteredIds, o
             role="tab"
             aria-selected={active}
             onClick={() => onSelect(i)}
-            className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-3.5 py-2 text-xs font-bold transition-colors ${
+            className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap min-h-11 rounded-full border px-4 py-2 text-xs font-bold transition-colors ${
               active
                 ? 'border-zinc-900 bg-zinc-900 text-white'
                 : 'border-zinc-200 bg-white text-zinc-600 hover:bg-zinc-50'

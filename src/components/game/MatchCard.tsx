@@ -44,7 +44,7 @@ export default function MatchCard({ card, mismatch, onSelect }: Props) {
       ) : (
         <span className="text-center">
           <span className="block text-sm font-extrabold text-emerald-700 sm:text-base">{card.display}</span>
-          {card.subText && <span className="mt-0.5 block text-[10px] font-semibold text-zinc-400">{card.subText}</span>}
+          {card.subText && <span className="mt-0.5 block text-xs font-semibold text-zinc-500">{card.subText}</span>}
         </span>
       )}
     </motion.button>

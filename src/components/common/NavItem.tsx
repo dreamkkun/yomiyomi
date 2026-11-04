@@ -31,20 +31,20 @@ export default function NavItem({ tab, isActive }: Props) {
           className={`h-5 w-5 transition-transform duration-200 ${
             isActive
               ? 'scale-105 stroke-[2.2] text-emerald-600'
-              : 'stroke-[1.8] text-zinc-400 group-hover:text-zinc-600'
+              : 'stroke-[1.8] text-zinc-500 group-hover:text-zinc-600'
           }`}
         />
 
         {typeof tab.badgeCount === 'number' && tab.badgeCount > 0 && (
-          <span className="absolute -right-1 -top-0.5 rounded-full border border-white bg-rose-500 px-1.5 text-[9px] font-bold text-white">
+          <span className="absolute -right-1 -top-0.5 rounded-full border border-white bg-rose-500 px-1.5 text-[10px] font-bold text-white">
             {tab.badgeCount}
           </span>
         )}
       </div>
 
       <span
-        className={`mt-0.5 max-w-full truncate px-0.5 text-[10px] tracking-tight transition-colors duration-200 ${
-          isActive ? 'font-bold text-emerald-600' : 'font-medium text-zinc-400 group-hover:text-zinc-600'
+        className={`mt-0.5 max-w-full truncate px-0.5 text-xs tracking-tight transition-colors duration-200 ${
+          isActive ? 'font-bold text-emerald-600' : 'font-medium text-zinc-500 group-hover:text-zinc-600'
         }`}
       >
         {tab.label}

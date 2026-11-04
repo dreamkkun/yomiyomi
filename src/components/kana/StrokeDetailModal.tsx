@@ -75,7 +75,7 @@ export default function StrokeDetailModal({ kana, memorized, onClose, onToggleMe
               onClick={onClose}
               aria-label="닫기"
               title="닫기"
-              className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
+              className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
             >
               <X className="h-5 w-5" />
             </button>
@@ -83,7 +83,7 @@ export default function StrokeDetailModal({ kana, memorized, onClose, onToggleMe
             {/* 1. 글자 정보: 탭을 바꿔도 변하지 않는다 */}
             <div className="mb-3 mt-1 w-full text-center">
               <div
-                className={`mb-1 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[11px] font-bold ${
+                className={`mb-1 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-bold ${
                   traceScore !== null
                     ? 'border-emerald-300 bg-emerald-600 text-white'
                     : 'border-emerald-100 bg-emerald-50 text-emerald-700'
@@ -93,7 +93,7 @@ export default function StrokeDetailModal({ kana, memorized, onClose, onToggleMe
                 <span>{traceScore !== null ? `통과 완료 (${traceScore}점)` : '획순 정복'}</span>
               </div>
               <h2 className="text-2xl font-black leading-none text-zinc-900">{kana.char}</h2>
-              <p className="mt-1 text-xs font-semibold text-zinc-400">
+              <p className="mt-1 text-xs font-semibold text-zinc-500">
                 [{kana.romaji}] - {kana.korean} (총 {kana.strokeCount}획)
               </p>
             </div>

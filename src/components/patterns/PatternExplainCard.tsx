@@ -9,7 +9,7 @@ export default function PatternExplainCard({ pattern }: { pattern: PatternExerci
         <h3 className="text-xs font-bold text-emerald-950">
           공식: {pattern.patternFormula} <span className="font-medium text-emerald-800/70">({pattern.patternMeaning})</span>
         </h3>
-        <p className="mt-0.5 text-[11px] leading-relaxed text-emerald-800/80">{pattern.grammarTip}</p>
+        <p className="mt-0.5 text-xs leading-relaxed text-emerald-800/80">{pattern.grammarTip}</p>
       </div>
     </div>
   );

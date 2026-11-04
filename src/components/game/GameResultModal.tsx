@@ -68,7 +68,7 @@ export default function GameResultModal({ stats, reward, onRestart }: Props) {
                 <span>최종 점수</span>
                 <div className="flex items-center gap-1.5">
                   {reward?.isNewHighScore && (
-                    <span className="rounded-md bg-amber-100 px-1.5 py-0.5 text-[9px] font-black text-amber-800">
+                    <span className="rounded-md bg-amber-100 px-1.5 py-0.5 text-xs font-black text-amber-800">
                       NEW HIGH
                     </span>
                   )}
@@ -120,7 +120,7 @@ export default function GameResultModal({ stats, reward, onRestart }: Props) {
                   >
                     <span className="rounded-lg bg-white p-1 text-xl shadow-sm">{badge.icon}</span>
                     <div className="min-w-0 flex-1">
-                      <span className="block text-[9px] font-bold uppercase text-amber-800">신규 뱃지 달성!</span>
+                      <span className="block text-xs font-bold uppercase text-amber-800">신규 뱃지 달성!</span>
                       <h4 className="truncate text-xs font-bold text-zinc-900">{badge.name}</h4>
                     </div>
                   </motion.div>

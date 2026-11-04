@@ -34,7 +34,7 @@ export default function KanaCell({ kana, memorized, onSelect }: Props) {
         </span>
       )}
       <span className="text-2xl font-bold leading-none text-zinc-900">{kana.char}</span>
-      <span className="mt-1 text-[10px] font-semibold text-zinc-400">{kana.romaji}</span>
+      <span className="mt-1 text-xs font-semibold text-zinc-500">{kana.romaji}</span>
     </motion.button>
   );
 }

@@ -60,7 +60,7 @@ export default function PatternsPage() {
             <Blocks className="h-5 w-5" />
           </div>
           <div>
-            <span className="block text-[10px] font-bold uppercase tracking-wider text-emerald-600">Sentence Bridge</span>
+            <span className="block text-xs font-bold uppercase tracking-wider text-emerald-600">Sentence Bridge</span>
             <h1 className="text-base font-black text-zinc-900">기초 문형 조립하기</h1>
           </div>
         </div>
@@ -88,11 +88,11 @@ export default function PatternsPage() {
                     ? 'border-emerald-300 bg-emerald-50 text-emerald-700'
                     : state === 'now'
                       ? 'border-zinc-900 bg-zinc-900 text-white'
-                      : 'border-zinc-200 bg-white text-zinc-400'
+                      : 'border-zinc-200 bg-white text-zinc-500'
                 }`}
               >
-                <span className="block text-[10px] font-bold">Step {n}/3</span>
-                <span className="block truncate text-[10px]">{label}</span>
+                <span className="block text-xs font-bold">Step {n}/3</span>
+                <span className="block text-xs leading-tight">{label}</span>
               </li>
             );
           })}
@@ -142,7 +142,7 @@ export default function PatternsPage() {
             className={`flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl py-3.5 text-xs font-bold transition-all ${
               slotsFilled && status === 'idle' && !done
                 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20 hover:bg-emerald-700 active:scale-[0.99]'
-                : 'cursor-not-allowed bg-zinc-200 text-zinc-400'
+                : 'cursor-not-allowed bg-zinc-200 text-zinc-500'
             }`}
           >
             <span>문장 완성하기</span>

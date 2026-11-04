@@ -74,7 +74,7 @@ export default function KanaMatchGame() {
           </div>
         </div>
 
-        <p className="mb-3 text-center text-[11px] text-zinc-500">
+        <p className="mb-3 text-center text-xs text-zinc-500">
           문자 카드와 발음 카드를 짝지어 보세요 · 3콤보부터 피버(점수 x2.0)
           {ready && bestScore > 0 && <span className="ml-1 font-bold text-amber-600">· 최고 {bestScore.toLocaleString()}P</span>}
         </p>

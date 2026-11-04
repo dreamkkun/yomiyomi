@@ -46,7 +46,7 @@ export default function BadgeDetailModal({ badge, onClose }: Props) {
               type="button"
               onClick={onClose}
               aria-label="닫기"
-              className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full text-zinc-400 hover:bg-zinc-100 hover:text-zinc-600"
+              className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full text-zinc-500 hover:bg-zinc-100 hover:text-zinc-600"
             >
               <X className="h-4 w-4" />
             </button>
@@ -60,7 +60,7 @@ export default function BadgeDetailModal({ badge, onClose }: Props) {
             </div>
 
             <span
-              className={`mb-1.5 inline-block rounded-full px-2.5 py-0.5 text-[10px] font-bold tracking-wider ${
+              className={`mb-1.5 inline-block rounded-full px-2.5 py-0.5 text-xs font-bold tracking-wider ${
                 unlocked ? 'bg-emerald-100 text-emerald-800' : 'bg-zinc-100 text-zinc-600'
               }`}
             >
@@ -71,10 +71,10 @@ export default function BadgeDetailModal({ badge, onClose }: Props) {
             <p className="mt-2 text-xs leading-relaxed text-zinc-600">{badge.description}</p>
 
             <div className="mt-4 border-t border-zinc-100 pt-4 text-left">
-              <span className="block text-[10px] font-semibold text-zinc-400">달성 조건</span>
+              <span className="block text-xs font-semibold text-zinc-500">달성 조건</span>
               <span className="mt-0.5 block text-xs font-medium text-zinc-700">{badge.requirementText}</span>
               {badge.unlockedAt && (
-                <span className="mt-1 block text-[11px] font-semibold text-emerald-600">
+                <span className="mt-1 block text-xs font-semibold text-emerald-600">
                   획득일: {formatDate(badge.unlockedAt)}
                 </span>
               )}

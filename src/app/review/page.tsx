@@ -38,7 +38,7 @@ export default function SrsReviewPage() {
             </div>
             <div>
               <h1 className="text-base font-black text-zinc-900">오늘의 오답 복습</h1>
-              <p className="text-[11px] font-medium text-zinc-400">망각곡선(SM-2) 간격 반복</p>
+              <p className="text-xs font-medium text-zinc-500">망각곡선(SM-2) 간격 반복</p>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ export default function SrsReviewPage() {
         </div>
 
         {!session ? (
-          <p className="py-20 text-center text-sm text-zinc-400">복습 덱을 준비하는 중…</p>
+          <p className="py-20 text-center text-sm text-zinc-500">복습 덱을 준비하는 중…</p>
         ) : engine.isEmpty ? (
           <div className="space-y-4">
             <SrsProgressGauge completed={0} total={0} mastery={engine.mastery} />

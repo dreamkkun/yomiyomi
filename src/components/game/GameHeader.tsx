@@ -34,7 +34,7 @@ export default function GameHeader({ stats, soundEnabled, onToggleSound, onResta
             aria-pressed={soundEnabled}
             title="소리 켜기/끄기"
             aria-label="소리 켜기/끄기"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
           >
             {soundEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
           </button>
@@ -43,7 +43,7 @@ export default function GameHeader({ stats, soundEnabled, onToggleSound, onResta
             onClick={onRestart}
             title="다시 시작"
             aria-label="다시 시작"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-600"
           >
             <RotateCcw className="h-4 w-4" />
           </button>
@@ -78,13 +78,13 @@ export default function GameHeader({ stats, soundEnabled, onToggleSound, onResta
               key={combo}
               initial={{ scale: 0.8 }}
               animate={{ scale: [1, 1.15, 1] }}
-              className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] ${
+              className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-xs ${
                 isFever ? 'bg-gradient-to-r from-amber-500 to-rose-500 text-white shadow-sm' : 'bg-emerald-100 text-emerald-800'
               }`}
             >
               <Flame className="h-3 w-3 fill-current" />
               <span>{combo} COMBO</span>
-              {isFever && <span className="text-[9px] font-black">x2.0</span>}
+              {isFever && <span className="text-xs font-black">x2.0</span>}
             </motion.div>
           )}
           <div className="text-sm font-black text-zinc-900">{score.toLocaleString()} P</div>

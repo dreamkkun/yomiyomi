@@ -97,7 +97,7 @@ export default function VoiceSupportNotice() {
                   type="button"
                   onClick={() => setOpen((v) => !v)}
                   aria-expanded={open}
-                  className="mt-1 font-bold underline underline-offset-2"
+                  className="-mb-2 mt-0 inline-flex min-h-11 items-center font-bold underline underline-offset-2"
                 >
                   {open ? '설치 방법 접기' : '설치 방법 보기'}
                 </button>
@@ -117,7 +117,7 @@ export default function VoiceSupportNotice() {
                 onClick={dismiss}
                 aria-label="안내 닫기 (다시 보지 않기)"
                 title="다시 보지 않기"
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-amber-700 hover:bg-amber-100"
+                className="-my-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-amber-700 hover:bg-amber-100"
               >
                 <X className="h-4 w-4" />
               </button>
